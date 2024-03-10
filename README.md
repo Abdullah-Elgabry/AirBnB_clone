@@ -1,2 +1,4 @@
 this is the readme for the 0x00. AirBnB clone project
-version #1
+an application for python
+and oop
+version 1
