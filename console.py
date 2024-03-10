@@ -10,17 +10,17 @@ import json
 
 class HBNBCommand(cmd.Cmd):
 
-    """Class for the command interpreter."""
+    """this Class represent interpreter cmd."""
 
     prompt = "(hbnb) "
 
     def default(self, line):
-        """Catch commands if nothing else matches then."""
+        """this will notify if there is any non matches."""
         # print("DEF:::", line)
         self._precmd(line)
 
     def _precmd(self, line):
-        """Intercepts commands to test for class.syntax()"""
+        """this command will Intercepts commands to test for class.syntax()"""
         # print("PRECMD:::", line)
         match = re.search(r"^(\w*)\.(\w+)(?:\(([^)]*)\))$", line)
         if not match:
