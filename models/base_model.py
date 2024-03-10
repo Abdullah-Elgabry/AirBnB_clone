@@ -14,8 +14,8 @@ class BaseModel:
         """Initializes instance attributes
 
         Args:
-            - *args: list of arguments
-            - **kwargs: dict of key-values arguments
+            - *args: args lst
+            - **kwargs: args lst for the keys val
         """
 
         if kwargs is not None and kwargs != {}:
@@ -35,7 +35,7 @@ class BaseModel:
             storage.new(self)
 
     def __str__(self):
-        """Returns official string representation"""
+        """this will ret the represnt"""
 
         return "[{}] ({}) {}".\
             format(type(self).__name__, self.id, self.__dict__)
@@ -47,7 +47,7 @@ class BaseModel:
         storage.save()
 
     def to_dict(self):
-        """returns a dictionary containing all keys/values of __dict__"""
+        """dict will be returned containing all keys/values of __dict__"""
 
         my_dict = self.__dict__.copy()
         my_dict["__class__"] = type(self).__name__

@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """Class for managing review objects"""
+    """this Class will moderate the rewives"""
 
     place_id = ""
     user_id = ""

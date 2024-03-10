@@ -4,7 +4,7 @@ from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """Class for managing user objects"""
+    """This class will moderate the user"""
 
     email = ""
     password = ""

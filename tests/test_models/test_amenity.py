@@ -15,14 +15,14 @@ from models.base_model import BaseModel
 
 class TestAmenity(unittest.TestCase):
 
-    """Test Cases for the Amenity class."""
+    """Testing Cases for the Amenity class."""
 
     def setUp(self):
-        """Sets up test methods."""
+        """Sets up testing methods."""
         pass
 
     def tearDown(self):
-        """Tears down test methods."""
+        """Tears down testing methods."""
         self.resetStorage()
         pass
 
@@ -33,7 +33,7 @@ class TestAmenity(unittest.TestCase):
             os.remove(FileStorage._FileStorage__file_path)
 
     def test_8_instantiation(self):
-        """Tests instantiation of Amenity class."""
+        """Testing instantiation of Amenity class."""
 
         b = Amenity()
         self.assertEqual(str(type(b)), "<class 'models.amenity.Amenity'>")
@@ -41,7 +41,7 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(issubclass(type(b), BaseModel))
 
     def test_8_attributes(self):
-        """Tests the attributes of Amenity class."""
+        """Testing the attributes of Amenity class."""
         attributes = storage.attributes()["Amenity"]
         o = Amenity()
         for k, v in attributes.items():

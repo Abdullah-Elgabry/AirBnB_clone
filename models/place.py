@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Class for managing place objects"""
+    """this will moderate the place"""
 
     city_id = ""
     user_id = ""

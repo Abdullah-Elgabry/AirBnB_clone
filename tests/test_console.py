@@ -35,7 +35,7 @@ class TestHBNBCommand(unittest.TestCase):
     }
 
     def setUp(self):
-        """Sets up test cases."""
+        """Sets up testing cases."""
         if os.path.isfile("file.json"):
             os.remove("file.json")
         self.resetStorage()
@@ -59,21 +59,21 @@ EOF  all  count  create  destroy  help  quit  show  update
         self.assertEqual(s, f.getvalue())
 
     def test_help_EOF(self):
-        """Tests the help command."""
+        """Testing the help command."""
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("help EOF")
         s = 'Handles End Of File character.\n        \n'
         self.assertEqual(s, f.getvalue())
 
     def test_help_quit(self):
-        """Tests the help command."""
+        """Testing the help command."""
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("help quit")
         s = 'Exits the program.\n        \n'
         self.assertEqual(s, f.getvalue())
 
     def test_help_create(self):
-        """Tests the help command."""
+        """Testing the help command."""
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("help create")
         s = 'Creates an instance.\n        \n'

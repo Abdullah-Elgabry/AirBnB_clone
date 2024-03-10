@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Class for managing city objects"""
+    """this class will moderate the cites"""
 
     state_id = ""
     name = ""
