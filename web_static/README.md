@@ -1,1 +1,1 @@
-web_static
+add a web static folder 
